@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+/* === GRID LAYOUT === */
+.grid-layout {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+aside {
+  grid-area: sidebar;
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+footer {
+  grid-area: footer;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* === IMAGE GALLERY === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.05);
+}
+
+.img-box span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-box:hover span {
+  opacity: 1;
+}

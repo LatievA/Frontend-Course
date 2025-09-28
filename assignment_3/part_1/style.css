@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;                 
+  justify-content: space-between;/* Logo left, links right */
+  align-items: center;           /* Vertical centering */
+  padding: 15px 40px;
+  background-color: #333;
+  color: white;
+}
+
+/* Links container */
+.nav-links ul {
+  list-style: none;
+  display: flex;    /* <--- This makes the links horizontal */
+  gap: 20px;        /* spacing between items */
+  margin: 0;        /* reset */
+  padding: 0;       /* reset */
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 60px; /* Adjust as needed */
+  width: auto;
+}
+
+/* Links */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* Hover color */
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}

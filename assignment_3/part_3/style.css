@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;  /* vertical layout */
+  min-height: 100vh;       /* at least full viewport */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 35px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Main grid fills remaining space */
+.main-grid {
+  flex: 1;  /* grow to fill space between header & footer */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+
+  align-items: start; /* ⬅️ ensures projects & sidebar stick to top */
+}
+
+/* Projects Section */
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  display: flex;                /* flexbox inside */
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-card button {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-card button:hover {
+  background: #e68900;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer stays at bottom */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;  /* pushes footer down */
+}
