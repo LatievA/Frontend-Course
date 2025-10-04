@@ -1,0 +1,31 @@
+body { font-family: Arial, sans-serif; }
+
+
+/* Typography breakpoints */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+p { font-size: 1rem; }
+
+
+@media (max-width: 991px) and (min-width: 600px) {
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.6rem; }
+}
+@media (max-width: 599px) {
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.2rem; }
+}
+
+
+/* Responsive three box layout */
+.three-boxes { display:flex; gap:1rem; flex-wrap:nowrap; }
+.box { flex:1; background:#f8f9fa; border:1px solid #ddd; padding:1rem; text-align:center; border-radius:6px; }
+
+
+@media (max-width: 991px) {
+.three-boxes { flex-wrap:wrap; }
+.box { flex-basis:48%; }
+}
+@media (max-width: 599px) {
+.box { flex-basis:100%; }
+}

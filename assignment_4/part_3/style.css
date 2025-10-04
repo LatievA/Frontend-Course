@@ -1,0 +1,5 @@
+/* Responsive adjustments for portfolio */
+@media (max-width: 768px) {
+h2 { font-size: 1.4rem; }
+.card-title { font-size: 1rem; }
+}
