@@ -27,5 +27,5 @@ h2 { font-size: 1.2rem; }
 .box { flex-basis:48%; }
 }
 @media (max-width: 599px) {
-.box { flex-basis:100%; }
+.box { flex-basis:100%; background-color:aqua}
 }
