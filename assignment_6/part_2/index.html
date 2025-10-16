@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 2</title>
+  <style>
+      #contentBox {
+        width: 300px;
+        height: 150px;
+        background-color: lightgray;
+        color: black;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #000;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+      }
+    </style>
+</head>
+<body>
+  <h1>Part 2</h1>
+
+  <p id="message">This is the original paragraph text.</p>
+  <button id="changeBtn">Change Text</button>
+  
+  <div id="contentBox">This is a content box.</div>
+
+  <button id="bgBtn">Change Background Color</button>
+  <button id="fontBtn">Change Font Size</button>
+
+  
+  <button id="addBtn">Add Item</button>
+  <button id="removeBtn">Remove Item</button>
+
+  <ul id="itemList">
+    <li>Item 1</li>
+  </ul>
+  
+  <script src="script.js"></script>
+</body>
+</html>

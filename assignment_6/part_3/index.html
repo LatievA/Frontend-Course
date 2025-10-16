@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    /* Task 5 */
+    #colorBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightgray;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Task 6 */
+    #displayText {
+      font-weight: bold;
+      color: #007acc;
+    }
+
+    /* Task 7 */
+    #calculator {
+      margin-top: 20px;
+    }
+    #calculator input {
+      width: 80px;
+      padding: 5px;
+      margin: 5px;
+      text-align: center;
+    }
+    #calculator button {
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Part 3: Events</h1>
+
+  <!-- Task 5: Mouse Events -->
+  <h2>Task 5: Mouse Events</h2>
+  <div id="colorBox">Hover Over Me</div>
+
+  <!-- Task 6: Keyboard Events -->
+  <h2>Task 6: Keyboard Events</h2>
+  <input type="text" id="textInput" placeholder="Type something...">
+  <p>Current value: <span id="displayText"></span></p>
+
+  <!-- Task 7: Calculator -->
+  <h2>Task 7: Calculator</h2>
+  <div id="calculator">
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <br>
+    <button id="addBtn">+</button>
+    <button id="subBtn">-</button>
+    <button id="mulBtn">*</button>
+    <button id="divBtn">/</button>
+    <p id="result">Result: </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
