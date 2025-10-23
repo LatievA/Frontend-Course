@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 1</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <button id="btn" class="hhh">Click Me</button>
+  <p id="msg" class="hhh"></p>
+  <p id="msg2" class="hhh">This is a sample paragraph.</p>
+
+  <script>
+    $(document).ready(function() {
+      console.log("jQuery is ready!");
+      $("button").click(function() {
+        $("#msg").text("Button Clicked!");
+        $("#msg2").html("This paragraph's text has been <strong>changed</strong>.");
+        $(".hhh").css("color", "blue");
+      });
+    });
+  </script>
+</body>
+</html>

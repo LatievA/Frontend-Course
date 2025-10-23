@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Part 2</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div style="background-color: green;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptas, consequatur qui obcaecati nemo magni iste distinctio possimus odio repellendus unde laboriosam dolor, adipisci ipsam fuga in ipsum doloribus dolorem.</p>
+        <button id="showBtn">Show</button>
+        <button id="hideBtn">Hide</button>
+        <button id="toggleBtn">Toggle</button>
+    </div>
+    
+    <div style="background-color: blue">
+        <img src="960x540.jpg" alt="Placeholder Image">
+        <button id="fadeInBtn">FadeIn</button>
+        <button id="fadeOutBtn">FadeOut</button>
+        <button id="fadeToggleBtn">FadeToggle</button>
+    </div>
+    
+    
+    <div style="background-color: red"  class="panel">
+        <div class="panel-header">Click to Toggle Content</div>
+            <div class="panel-content">
+              <p>Hello My Lord 👑, this is your collapsible panel content. You can open and close it using jQuery’s slide methods.</p>
+            </div>
+            <div>
+                <button id="slideUpBtn">Slide Up</button>
+                <button id="slideDownBtn">Slide Down</button>
+            </div>
+    </div>
+    
+    
+    <script>
+      $(document).ready(function() {
+        $('#showBtn').click(function() {
+          $('p').show();
+        });
+
+        $('#hideBtn').click(function() {
+          $('p').hide();
+        });
+
+        $('#toggleBtn').click(function() {
+          $('p').toggle();
+        });
+        
+        $('#fadeInBtn').click(function() {
+          $('img').fadeIn();
+        });
+
+        $('#fadeOutBtn').click(function() {
+          $('img').fadeOut();
+        });
+
+        $('#fadeToggleBtn').click(function() {
+          $('img').fadeToggle();
+        });
+        
+        $('.panel-header').click(function() {
+          $(this).next('.panel-content').slideToggle();
+        });
+        $('#slideUpBtn').click(function() {
+          $('.panel-content').slideUp();
+        });
+
+        $('#slideDownBtn').click(function() {
+          $('.panel-content').slideDown();
+        });
+      });
+    </script>
+</body>
+</html>
