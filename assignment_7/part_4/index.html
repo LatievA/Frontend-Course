@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Part 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            position: relative;
+            border-radius: 8px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Task 8</h2>
+        <div id="box"></div>
+        <br>
+        <button id="animateBasic">Animate Square</button>
+    </section>
+
+    <section>
+        <h2>Task 9</h2>
+        <button id="animateSequential">Run Sequential Animation</button>
+    </section>
+
+    <section>
+        <h2>Task 10</h2>
+        <button id="animateCombined">Run Combined Animation</button>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            const $box = $("#box");
+
+            // Reset function for clarity
+            function resetBox() {
+                $box.stop(true, true).css({
+                    width: "100px",
+                    height: "100px",
+                    top: "0",
+                    left: "0",
+                    opacity: 1,
+                    backgroundColor: "steelblue"
+                });
+            }
+
+            // Task 8
+            $("#animateBasic").click(function() {
+                resetBox();
+                $box.animate({
+                    width: "200px",
+                    height: "200px",
+                    left: "150px",
+                    top: "50px"
+                }, 1000);
+            });
+
+            // Task 9
+            $("#animateSequential").click(function() {
+                resetBox();
+                $box.animate({ left: "200px" }, 600)
+                    .animate({ top: "150px" }, 600)
+                    .animate({ width: "50px", height: "50px" }, 600)
+                    .animate({ left: "0px", top: "0px", width: "100px", height: "100px" }, 600);
+            });
+
+            // Task 10
+            $("#animateCombined").click(function() {
+                resetBox();
+                $box.animate({
+                    width: "180px",
+                    height: "180px",
+                    left: "100px",
+                    top: "80px",
+                    opacity: 0.5
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+</html>

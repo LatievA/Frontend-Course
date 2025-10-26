@@ -1,25 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 3</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-<body>
-  <button id="btn" class="hhh">Click Me</button>
-  <p id="msg" class="hhh"></p>
-  <p id="msg2" class="hhh">This is a sample paragraph.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Part 3</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 30px;
+            }
+            section {
+                margin-bottom: 40px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+            button {
+                margin: 5px;
+            }
+            input {
+                margin: 5px 0;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h2>Task 5</h2>
+            <ul id="itemList">
+                <li>Item 1</li>
+            </ul>
+            <button id="addItem">Add Item</button>
+            <button id="prependItem">Prepend Item</button>
+            <button id="removeItem">Remove Last Item</button>
+        </section>
 
-  <script>
-    $(document).ready(function() {
-      console.log("jQuery is ready!");
-      $("button").click(function() {
-        $("#msg").text("Button Clicked!");
-        $("#msg2").html("This paragraph's text has been <strong>changed</strong>.");
-        $(".hhh").css("color", "blue");
-      });
-    });
-  </script>
-</body>
+        <section>
+            <h2>Task 6</h2>
+            <img
+                id="demoImage"
+                src="https://via.placeholder.com/150"
+                alt="Demo Image"
+                width="150"
+            />
+            <br />
+            <button id="changeImage">Change Image</button>
+            <br /><br />
+            <a id="demoLink" href="https://www.google.com" target="_blank"
+                >Visit Google</a
+            >
+            <br />
+            <button id="changeLink">Change Link</button>
+        </section>
+
+        <section>
+            <h2>Task 7</h2>
+            <form id="userForm" onsubmit="return false;">
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" /><br />
+            </form>
+
+            <h4>Live Preview:</h4>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        </section>
+
+
+        <script>
+            $(document).ready(function () {
+                let count = 2;
+
+                $("#addItem").click(function () {
+                    $("#itemList").append("<li>Item " + count++ + "</li>");
+                });
+
+                $("#prependItem").click(function () {
+                    $("#itemList").prepend(
+                        "<li>New First Item " + count++ + "</li>",
+                    );
+                });
+
+                $("#removeItem").click(function () {
+                    $("#itemList li:last-child").remove();
+                });
+
+                $("#changeImage").click(function () {
+                    $("#demoImage").attr(
+                        "src",
+                        "../part_2/960x540.jpg",
+                    );
+                });
+
+                $("#changeLink").click(function () {
+                    $("#demoLink")
+                        .attr("href", "https://www.wikipedia.org")
+                        .text("Visit Wikipedia");
+                });
+
+                $("#name").on("input", function () {
+                    $("#displayName").text($(this).val());
+                });
+
+                $("#email").on("input", function () {
+                    $("#displayEmail").text($(this).val());
+                });
+            });
+        </script>
+    </body>
 </html>
