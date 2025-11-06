@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-university"></i> SecureBank
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accounts.html">Accounts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="btn btn-login ms-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Banking Made Simple & Secure</h1>
+                    <p class="lead mb-4">Experience the future of banking with our innovative online platform. Manage your finances anytime, anywhere with complete security.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#loginModal">Open Account</a>
+                        <a href="services.html" class="btn btn-outline-light btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600" alt="Banking" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose SecureBank?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <h4>Secure & Safe</h4>
+                        <p>Bank-level encryption and 24/7 fraud monitoring to keep your money safe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                        </div>
+                        <h4>Mobile Banking</h4>
+                        <p>Access your accounts on-the-go with our mobile-friendly platform.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-clock fa-3x"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Get help whenever you need it with our round-the-clock customer service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Carousel -->
+    <section class="services-carousel py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto text-center">
+                                <i class="fas fa-piggy-bank fa-5x mb-4 text-primary"></i>
+                                <h3>Savings Accounts</h3>
+                                <p class="lead">Grow your wealth with competitive interest rates and zero monthly fees.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto text-center">
+                                <i class="fas fa-credit-card fa-5x mb-4 text-primary"></i>
+                                <h3>Credit Cards</h3>
+                                <p class="lead">Enjoy cashback rewards and exclusive benefits with our premium cards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto text-center">
+                                <i class="fas fa-home fa-5x mb-4 text-primary"></i>
+                                <h3>Home Loans</h3>
+                                <p class="lead">Make your dream home a reality with our flexible loan options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="50000">0</h2>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="150">0</h2>
+                    <p>Bank Branches</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="24">0</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h2 class="counter" data-target="99">0</h2>
+                    <p>% Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to SecureBank</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                            <div class="invalid-feedback">Please enter your username.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                            <div class="invalid-feedback">Please enter your password.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-university"></i> SecureBank</h5>
+                    <p>Your trusted partner in financial security and growth since 2000.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accounts.html">Account Types</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Banking Street, Finance City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@securebank.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 SecureBank. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

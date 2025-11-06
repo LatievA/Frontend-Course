@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-university"></i> SecureBank
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accounts.html">Accounts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="btn btn-login ms-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">We're here to help you with all your banking needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-phone fa-3x text-primary"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p class="mb-2"><strong>Customer Service:</strong></p>
+                        <p>+1 (555) 123-4567</p>
+                        <p class="mb-2"><strong>Business Banking:</strong></p>
+                        <p>+1 (555) 123-4568</p>
+                        <p class="text-muted small">Mon-Fri: 8AM-8PM<br>Sat-Sun: 9AM-5PM</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-envelope fa-3x text-primary"></i>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p class="mb-2"><strong>General Inquiries:</strong></p>
+                        <p>info@securebank.com</p>
+                        <p class="mb-2"><strong>Support:</strong></p>
+                        <p>support@securebank.com</p>
+                        <p class="text-muted small">We respond within 24 hours</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-card text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4>Visit Us</h4>
+                        <p class="mb-2"><strong>Head Office:</strong></p>
+                        <p>123 Banking Street<br>Finance City, FC 12345<br>United States</p>
+                        <button class="btn btn-outline-primary btn-sm mt-2" onclick="showMap()">View on Map</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-4">Send Us a Message</h2>
+                    <div class="contact-form-card p-4">
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">Please enter your first name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">Please enter your last name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" pattern="[0-9]{10,}">
+                                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Choose a subject...</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="account">Account Information</option>
+                                        <option value="loan">Loan Application</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="feedback">Feedback</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a subject.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required minlength="10"></textarea>
+                                    <div class="invalid-feedback">Please enter a message (minimum 10 characters).</div>
+                                    <div class="form-text">Minimum 10 characters</div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for updates and offers
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                            <i class="fas fa-check-circle me-2"></i> Thank you for contacting us! We'll get back to you within 24 hours.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I open a new account?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can open a new account online through our website or mobile app in just a few minutes. Simply click on the "Open Account" button, choose your account type, and follow the step-by-step process. You'll need a valid ID and basic personal information.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What are your branch hours?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our branches are open Monday through Friday from 9:00 AM to 5:00 PM, and Saturday from 9:00 AM to 1:00 PM. We're closed on Sundays and major holidays. However, you can access your account 24/7 through our online banking and mobile app.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is online banking secure?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, absolutely! We use bank-level 256-bit encryption, multi-factor authentication, and continuous fraud monitoring to protect your accounts. We also provide alerts for suspicious activities and never ask for your password via email or phone.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How can I reset my password?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Click on "Forgot Password" on the login page, enter your username and registered email address. We'll send you a secure link to reset your password. If you need assistance, our customer service team is available 24/7.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What fees do you charge?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer several accounts with zero monthly fees. For premium accounts, fees vary by account type and can often be waived by maintaining a minimum balance. Check our Accounts page for detailed fee information, or contact us for a personalized consultation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="mapSection" style="display: none;">
+        <div class="container-fluid p-0">
+            <div class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1635959088895!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact py-4 bg-danger text-white">
+        <div class="container text-center">
+            <h4><i class="fas fa-exclamation-triangle me-2"></i> Report Lost/Stolen Card</h4>
+            <p class="mb-2">Available 24/7: <a href="tel:18005551234" class="text-white fw-bold">1-800-555-1234</a></p>
+            <p class="small mb-0">For immediate card deactivation and fraud protection</p>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to SecureBank</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-university"></i> SecureBank</h5>
+                    <p>Your trusted partner in financial security and growth since 2000.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accounts.html">Account Types</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Banking Street, Finance City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@securebank.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 SecureBank. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

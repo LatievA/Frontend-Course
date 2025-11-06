@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-university"></i> SecureBank
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accounts.html">Accounts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="btn btn-login ms-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Services</h1>
+            <p class="lead">Comprehensive banking solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Banking Services -->
+            <h2 class="mb-4">Banking Services</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wallet fa-3x"></i>
+                        </div>
+                        <h4>Personal Banking</h4>
+                        <p>Manage your daily finances with checking and savings accounts designed for your lifestyle.</p>
+                        <ul class="service-features">
+                            <li>Zero monthly fees</li>
+                            <li>Free ATM access</li>
+                            <li>Mobile check deposit</li>
+                            <li>Bill pay services</li>
+                        </ul>
+                        <button class="btn btn-outline-primary" onclick="toggleDetails(this)">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase fa-3x"></i>
+                        </div>
+                        <h4>Business Banking</h4>
+                        <p>Grow your business with commercial accounts and merchant services.</p>
+                        <ul class="service-features">
+                            <li>Business checking & savings</li>
+                            <li>Merchant services</li>
+                            <li>Payroll solutions</li>
+                            <li>Business credit cards</li>
+                        </ul>
+                        <button class="btn btn-outline-primary" onclick="toggleDetails(this)">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-exchange-alt fa-3x"></i>
+                        </div>
+                        <h4>Money Transfers</h4>
+                        <p>Send and receive money quickly and securely, domestically and internationally.</p>
+                        <ul class="service-features">
+                            <li>Instant transfers</li>
+                            <li>International wire</li>
+                            <li>ACH payments</li>
+                            <li>Peer-to-peer transfers</li>
+                        </ul>
+                        <button class="btn btn-outline-primary" onclick="toggleDetails(this)">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loan Services -->
+            <h2 class="mb-4">Loan Services</h2>
+            <div class="accordion" id="loanAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#homeLoan">
+                            <i class="fas fa-home me-3"></i> Home Loans
+                        </button>
+                    </h2>
+                    <div id="homeLoan" class="accordion-collapse collapse show" data-bs-parent="#loanAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Make Your Dream Home a Reality</h5>
+                                    <p>Our home loan products offer competitive rates and flexible terms to help you purchase or refinance your home.</p>
+                                    <ul>
+                                        <li>Fixed and variable rate options</li>
+                                        <li>Up to 30-year terms</li>
+                                        <li>Low down payment options</li>
+                                        <li>First-time buyer programs</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="loan-highlight">
+                                        <h6>Starting from</h6>
+                                        <h2 class="text-primary">3.5%</h2>
+                                        <p>Annual Interest Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autoLoan">
+                            <i class="fas fa-car me-3"></i> Auto Loans
+                        </button>
+                    </h2>
+                    <div id="autoLoan" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Drive Away with Confidence</h5>
+                                    <p>Get behind the wheel of your dream car with our flexible auto financing options.</p>
+                                    <ul>
+                                        <li>New and used car financing</li>
+                                        <li>Competitive interest rates</li>
+                                        <li>Quick approval process</li>
+                                        <li>Flexible repayment terms</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="loan-highlight">
+                                        <h6>Starting from</h6>
+                                        <h2 class="text-primary">4.2%</h2>
+                                        <p>Annual Interest Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#personalLoan">
+                            <i class="fas fa-hand-holding-usd me-3"></i> Personal Loans
+                        </button>
+                    </h2>
+                    <div id="personalLoan" class="accordion-collapse collapse" data-bs-parent="#loanAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>Financial Flexibility When You Need It</h5>
+                                    <p>Personal loans for any purpose - consolidate debt, fund a project, or cover unexpected expenses.</p>
+                                    <ul>
+                                        <li>Loans up to $50,000</li>
+                                        <li>No collateral required</li>
+                                        <li>Same-day approval</li>
+                                        <li>Flexible repayment schedules</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="loan-highlight">
+                                        <h6>Starting from</h6>
+                                        <h2 class="text-primary">6.5%</h2>
+                                        <p>Annual Interest Rate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Services -->
+            <div class="mt-5">
+                <h2 class="mb-4">Investment Services</h2>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="investment-card">
+                            <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
+                            <h4>Wealth Management</h4>
+                            <p>Let our experts help you build and protect your wealth with personalized investment strategies.</p>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">Schedule Consultation</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="investment-card">
+                            <i class="fas fa-piggy-bank fa-3x text-info mb-3"></i>
+                            <h4>Retirement Planning</h4>
+                            <p>Secure your future with IRA accounts, 401(k) rollovers, and retirement planning services.</p>
+                            <button class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">Open an account today and experience banking reimagined.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to SecureBank</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Request Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option value="">Select Service</option>
+                                <option>Wealth Management</option>
+                                <option>Retirement Planning</option>
+                                <option>Home Loan</option>
+                                <option>Auto Loan</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-university"></i> SecureBank</h5>
+                    <p>Your trusted partner in financial security and growth since 2000.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accounts.html">Account Types</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Banking Street, Finance City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@securebank.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 SecureBank. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

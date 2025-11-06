@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Account Types</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="fas fa-university"></i> SecureBank
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="accounts.html">Accounts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="btn btn-login ms-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Account Types</h1>
+            <p class="lead">Find the perfect account that fits your financial goals</p>
+        </div>
+    </section>
+
+    <!-- Account Comparison Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Compare Our Accounts</h2>
+            
+            <!-- Account Tabs -->
+            <ul class="nav nav-tabs justify-content-center mb-4" id="accountTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="checking-tab" data-bs-toggle="tab" data-bs-target="#checking" type="button">
+                        <i class="fas fa-check-circle"></i> Checking
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="savings-tab" data-bs-toggle="tab" data-bs-target="#savings" type="button">
+                        <i class="fas fa-piggy-bank"></i> Savings
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business" type="button">
+                        <i class="fas fa-briefcase"></i> Business
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="accountTabContent">
+                <!-- Checking Accounts -->
+                <div class="tab-pane fade show active" id="checking" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card">
+                                <div class="account-badge">POPULAR</div>
+                                <h3>Basic Checking</h3>
+                                <div class="account-price">
+                                    <h2>$0</h2>
+                                    <p>Monthly Fee</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> No minimum balance</li>
+                                    <li><i class="fas fa-check text-success"></i> Free debit card</li>
+                                    <li><i class="fas fa-check text-success"></i> Online & mobile banking</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited transactions</li>
+                                    <li><i class="fas fa-check text-success"></i> Bill pay service</li>
+                                    <li><i class="fas fa-times text-muted"></i> No interest earned</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 mt-3" onclick="openAccountForm('Basic Checking')">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card featured">
+                                <div class="account-badge bg-success">RECOMMENDED</div>
+                                <h3>Premium Checking</h3>
+                                <div class="account-price">
+                                    <h2>$10</h2>
+                                    <p>Monthly Fee</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $500 minimum balance</li>
+                                    <li><i class="fas fa-check text-success"></i> Premium debit card</li>
+                                    <li><i class="fas fa-check text-success"></i> Online & mobile banking</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited transactions</li>
+                                    <li><i class="fas fa-check text-success"></i> Free checks & bill pay</li>
+                                    <li><i class="fas fa-check text-success"></i> 0.5% interest rate</li>
+                                    <li><i class="fas fa-check text-success"></i> Free wire transfers</li>
+                                    <li><i class="fas fa-check text-success"></i> Travel insurance</li>
+                                </ul>
+                                <button class="btn btn-success w-100 mt-3" onclick="openAccountForm('Premium Checking')">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card">
+                                <h3>Student Checking</h3>
+                                <div class="account-price">
+                                    <h2>$0</h2>
+                                    <p>Monthly Fee</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> No minimum balance</li>
+                                    <li><i class="fas fa-check text-success"></i> Free debit card</li>
+                                    <li><i class="fas fa-check text-success"></i> Online & mobile banking</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited transactions</li>
+                                    <li><i class="fas fa-check text-success"></i> Student discounts</li>
+                                    <li><i class="fas fa-check text-success"></i> Financial education tools</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 mt-3" onclick="openAccountForm('Student Checking')">Open Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Savings Accounts -->
+                <div class="tab-pane fade" id="savings" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card">
+                                <h3>Regular Savings</h3>
+                                <div class="account-price">
+                                    <h2>2.5%</h2>
+                                    <p>Annual Interest</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $100 minimum opening</li>
+                                    <li><i class="fas fa-check text-success"></i> No monthly fees</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited deposits</li>
+                                    <li><i class="fas fa-check text-success"></i> 6 free withdrawals/month</li>
+                                    <li><i class="fas fa-check text-success"></i> Online account access</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 mt-3" onclick="openAccountForm('Regular Savings')">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card featured">
+                                <div class="account-badge bg-success">BEST RATE</div>
+                                <h3>High Yield Savings</h3>
+                                <div class="account-price">
+                                    <h2>4.5%</h2>
+                                    <p>Annual Interest</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $1,000 minimum opening</li>
+                                    <li><i class="fas fa-check text-success"></i> $500 minimum balance</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited deposits</li>
+                                    <li><i class="fas fa-check text-success"></i> 6 free withdrawals/month</li>
+                                    <li><i class="fas fa-check text-success"></i> Online account access</li>
+                                    <li><i class="fas fa-check text-success"></i> Compound interest daily</li>
+                                </ul>
+                                <button class="btn btn-success w-100 mt-3" onclick="openAccountForm('High Yield Savings')">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="account-card">
+                                <h3>Money Market</h3>
+                                <div class="account-price">
+                                    <h2>3.8%</h2>
+                                    <p>Annual Interest</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $2,500 minimum opening</li>
+                                    <li><i class="fas fa-check text-success"></i> Check writing privileges</li>
+                                    <li><i class="fas fa-check text-success"></i> Tiered interest rates</li>
+                                    <li><i class="fas fa-check text-success"></i> Limited transactions</li>
+                                    <li><i class="fas fa-check text-success"></i> Debit card included</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 mt-3" onclick="openAccountForm('Money Market')">Open Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Accounts -->
+                <div class="tab-pane fade" id="business" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="account-card">
+                                <h3>Business Checking</h3>
+                                <div class="account-price">
+                                    <h2>$15</h2>
+                                    <p>Monthly Fee</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $500 minimum opening</li>
+                                    <li><i class="fas fa-check text-success"></i> 200 free transactions/month</li>
+                                    <li><i class="fas fa-check text-success"></i> Business debit card</li>
+                                    <li><i class="fas fa-check text-success"></i> Online banking & mobile app</li>
+                                    <li><i class="fas fa-check text-success"></i> Cash management tools</li>
+                                    <li><i class="fas fa-check text-success"></i> Merchant services available</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 mt-3" onclick="openAccountForm('Business Checking')">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="account-card featured">
+                                <div class="account-badge bg-success">FOR GROWTH</div>
+                                <h3>Business Savings</h3>
+                                <div class="account-price">
+                                    <h2>3.2%</h2>
+                                    <p>Annual Interest</p>
+                                </div>
+                                <ul class="account-features">
+                                    <li><i class="fas fa-check text-success"></i> $1,000 minimum opening</li>
+                                    <li><i class="fas fa-check text-success"></i> Competitive interest rates</li>
+                                    <li><i class="fas fa-check text-success"></i> No monthly fees</li>
+                                    <li><i class="fas fa-check text-success"></i> Unlimited deposits</li>
+                                    <li><i class="fas fa-check text-success"></i> 6 free withdrawals/month</li>
+                                    <li><i class="fas fa-check text-success"></i> Business online banking</li>
+                                </ul>
+                                <button class="btn btn-success w-100 mt-3" onclick="openAccountForm('Business Savings')">Open Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Savings Calculator</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="calculator-card p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Initial Deposit ($)</label>
+                                <input type="number" class="form-control" id="principal" value="5000">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Interest Rate (%)</label>
+                                <input type="number" class="form-control" id="rate" value="4.5" step="0.1">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Time Period (years)</label>
+                                <input type="number" class="form-control" id="time" value="5">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Monthly Contribution ($)</label>
+                                <input type="number" class="form-control" id="monthly" value="100">
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100" onclick="calculateSavings()">Calculate</button>
+                            </div>
+                        </div>
+                        <div id="result" class="mt-4 p-3 bg-success text-white rounded" style="display: none;">
+                            <h4 class="text-center mb-3">Your Future Balance</h4>
+                            <h2 class="text-center" id="futureValue">$0</h2>
+                            <div class="row mt-3">
+                                <div class="col-6 text-center">
+                                    <p class="mb-0">Total Deposits</p>
+                                    <h5 id="totalDeposits">$0</h5>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p class="mb-0">Interest Earned</p>
+                                    <h5 id="interestEarned">$0</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login to SecureBank</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Opening Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accountModalTitle">Open New Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="accountForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone *</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Address *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Date of Birth *</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Initial Deposit ($)</label>
+                                <input type="number" class="form-control" value="100">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the Terms and Conditions
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-university"></i> SecureBank</h5>
+                    <p>Your trusted partner in financial security and growth since 2000.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="accounts.html">Account Types</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Banking Street, Finance City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@securebank.com</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 SecureBank. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
